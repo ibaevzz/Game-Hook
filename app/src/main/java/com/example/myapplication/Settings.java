@@ -26,6 +26,7 @@ public class Settings extends AppCompatActivity {
         sbr.setOnClickListener(v -> {
             MainActivity.cups.edit().putInt("cups", 0).apply();
             Toast.makeText(Settings.this, "Очки сброшены", Toast.LENGTH_SHORT).show();
+            Menu.cups.setText("0");
         });
     }
 }

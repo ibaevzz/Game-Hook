@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     SharedPreferences log;
     public static SharedPreferences cups;
-    public static SharedPreferences.Editor editCup;
+    SharedPreferences.Editor editCup;
     final String sp = "LOG";
 
     @SuppressLint("WrongConstant")

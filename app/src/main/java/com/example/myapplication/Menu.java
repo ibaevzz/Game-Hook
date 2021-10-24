@@ -10,7 +10,11 @@ public class Menu extends AppCompatActivity {
 
     ImageView back;
     ImageView settings;
-    TextView cups;
+    static TextView cups;
+    TextView level1;
+    TextView level2;
+    TextView level3;
+    TextView level4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,24 @@ public class Menu extends AppCompatActivity {
         settings = findViewById(R.id.settings);
         settings.setOnClickListener(v->{
             startActivity(new Intent(this, Settings.class));
+        });
+
+        level1 = findViewById(R.id.level1);
+        level2 = findViewById(R.id.level2);
+        level3 = findViewById(R.id.level3);
+        level4 = findViewById(R.id.level4);
+
+        level1.setOnClickListener(v -> {
+            startActivity(new Intent(this, PlayActivity.class).putExtra("level", 1));
+        });
+        level2.setOnClickListener(v -> {
+            startActivity(new Intent(this, PlayActivity.class).putExtra("level", 2));
+        });
+        level3.setOnClickListener(v -> {
+            startActivity(new Intent(this, PlayActivity.class).putExtra("level", 3));
+        });
+        level4.setOnClickListener(v -> {
+            startActivity(new Intent(this, PlayActivity.class).putExtra("level", 4));
         });
     }
 }
